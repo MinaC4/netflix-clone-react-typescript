@@ -1,0 +1,11 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: netflix-clone-pdb
+  namespace: netflix-clone
+spec:
+  minAvailable: 1        # دايمًا يبقى فيه pod واحد شغال على الأقل
+  # maxUnavailable: 1    # أو تستخدم ده لو عايز تحدد عدد الـ pods اللي تقدر تتوقف
+  selector:
+    matchLabels:
+      app: netflix-clone
