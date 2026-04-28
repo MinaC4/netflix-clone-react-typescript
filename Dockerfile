@@ -1,35 +1,25 @@
-# Builder Stage
-
+# ====================== Builder Stage ======================
 FROM node:18-alpine AS builder
-
 WORKDIR /app
 
-# Copy package files first (better caching)
-
+# Copy package files first for better layer caching
 COPY package*.json ./
 
-# Install dependencies using npm ()
+# Install dependencies
+RUN npm ci
 
-RUN npm ci --only=production=false
-
-# Copy all source code
-
+# Copy source code
 COPY . .
 
-# Build argument + environment variables
-
+# Build arguments & environment variables
 ARG TMDB_V3_API_KEY
-
 ENV VITE_APP_TMDB_V3_API_KEY=${TMDB_V3_API_KEY}
-
 ENV VITE_APP_API_ENDPOINT_URL="https://api.themoviedb.org/3"
 
-# Build the app
-
+# Build the React app
 RUN npm run build
 
-# Production Stage
-
+# ====================== Production Stage ======================
 FROM nginx:stable-alpine
 
 COPY --from=builder /app/dist /usr/share/nginx/html
@@ -37,4 +27,3 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
-
