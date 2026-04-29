@@ -5,11 +5,11 @@
 
 ## Architecture diagram
 
-![Netflix Clone Architecture](https://raw.githubusercontent.com/YOUR_USERNAME/End-to-End-DevSecOps-Project-using-OpenShift-ArgoCD-Kubernetes-Native-Services/main/docs/architecture-diagram.png)
+![Netflix Clone Architecture] <img width="1536" height="1024" alt="5f30f26a-127f-49b7-8a99-6b30038074b4" src="https://github.com/user-attachments/assets/d69f48ee-e2bc-412c-8562-1d8788f946b0" />
+
 
 ### Detailed Architecture Flow
 
-![Netflix Clone - DevSecOps on OpenShift via GitOps](https://raw.githubusercontent.com/YOUR_USERNAME/End-to-End-DevSecOps-Project-using-OpenShift-ArgoCD-Kubernetes-Native-Services/main/docs/architecture-diagram.png)
 
 A modern **Netflix Clone application** built with **React + TypeScript + Vite**, and deployed on **OpenShift** using a full **DevSecOps + GitOps pipeline** with **Tekton (CI)** and **ArgoCD (CD)**.
 
