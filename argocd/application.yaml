@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: netflix-clone
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/MinaC4/netflix-clone-react-typescript.git
+    targetRevision: main
+    path: openshift
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: netflix-clone
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
+      - PruneLast=true
+      - ServerSideApply=true
+  ignoreDifferences:
+    - group: "route.openshift.io"
+      kind: Route
+      name: netflix-clone
+      jqPathExpressions:
+        - .spec.host
+        - .status
+        - .metadata.annotations
