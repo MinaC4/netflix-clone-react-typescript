@@ -41,7 +41,10 @@ A modern **Netflix Clone application** built with **React + TypeScript + Vite**,
   * ResourceQuota
   * LimitRange
   * Security policies
-* ArgoCD Application definition (`argocd/`) <img width="1920" height="1200" alt="Screenshot 2026-04-30 at 12 55 19 AM" src="https://github.com/user-attachments/assets/03e19a53-1486-489a-a3f5-75f1bf313fcc" />
+* ArgoCD Application definition (`argocd/`)
+<img width="1920" height="1200" alt="Screenshot 2026-04-30 at 12 55 19 AM" src="https://github.com/user-attachments/assets/03e19a53-1486-489a-a3f5-75f1bf313fcc" />
+
+
 
 
 --- <img width="1920" height="1200" alt="Screenshot 2026-04-30 at 12 53 29 AM" src="https://github.com/user-attachments/assets/726b80ae-adbb-4177-97cb-9967f177df40" />
@@ -146,6 +149,7 @@ Pipeline steps:
 * Prometheus → metrics collection
 * Grafana → dashboards & visualization
 * OpenShift Monitoring Stack → cluster insights
+
 <img width="1920" height="1200" alt="Screenshot 2026-04-30 at 3 06 36 AM" src="https://github.com/user-attachments/assets/e6a0ec66-470a-4abb-97a2-e7e614730e2f" />
 
 
