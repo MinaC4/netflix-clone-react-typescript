@@ -242,7 +242,7 @@ This project demonstrates a real-world production-style DevSecOps system:
 ---
 ## Repository Structure Note
 
-This project is simplify cloning and running the full DevOps flow with a single `git clone`, especially for local testing with OpenShift CRC.
+This project is simplify cloning and running the full DevOps flow  especially for local testing with OpenShift CRC.
 
 **Note:** Some files (tasks, triggers, and detailed pipeline structure) are not yet included in this repository for simplicity. They will be added in future updates.
 The following professional Tekton structure is **planned** but not yet added to the repository:
