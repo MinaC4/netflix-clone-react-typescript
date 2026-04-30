@@ -34,8 +34,8 @@
 - Deployment
 - Service
 - Route
-- HPA (autoscaling)
-- PDB (resilience)
+- Horizontal Pod Autoscaler (HPA)
+- Pod Disruption Budget (resilience)
 - ResourceQuota
 - LimitRange
 - Security policies
