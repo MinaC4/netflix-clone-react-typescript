@@ -56,7 +56,7 @@ A modern **Netflix Clone application** built with **React + TypeScript + Vite**,
 * Runs security scans (Trivy)
 * Pushes image to container registry
 
-> CI is cluster-managed and NOT stored in this repo (only referenced)
+
 
 ---
 
@@ -75,7 +75,7 @@ A modern **Netflix Clone application** built with **React + TypeScript + Vite**,
 
 
 
-## CI/CD pipeline (DevSecOps flow)
+## CI/CD pipeline (DevOps flow)
 
 ### 1. Developer workflow
 
@@ -154,52 +154,6 @@ Pipeline steps:
 
 ---
 
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-App runs on:
-
-```
-http://localhost
-```
-
----
-
-## Docker build & run
-
-```bash
-docker build --build-arg TMDB_V3_API_KEY=YOUR_KEY -t netflix-clone .
-docker run -p 8080:8080 netflix-clone
-```
-
----
-
-## Deployment (GitOps via ArgoCD)
-
-### 1. Apply ArgoCD application
-
-```bash
-oc apply -f argocd/application.yaml
-```
-
----
-
-### 2. Configure repository
-
-Update:
-
-```yaml
-spec:
-  source:
-    repoURL: YOUR_REPOSITORY_URL
-    targetRevision: main
-```
-
----
 
 ### 3. Verify deployment
 
@@ -210,7 +164,7 @@ Open ArgoCD UI:
 
 ---
 
-## What is NOT in this repo
+
 
 These components are cluster-managed:
 
@@ -242,24 +196,3 @@ This project demonstrates a real-world production-style DevSecOps system:
 * **OpenShift → Runtime platform**
 
 ---
-## Repository Structure Note
-
-This project is simplify cloning and running the full DevOps flow  especially for local testing with OpenShift CRC.
-
-**Note:** Some files (tasks, triggers, and detailed pipeline structure) are not yet included in this repository for simplicity. They will be added in future updates.
-The following professional Tekton structure is **planned** but not yet added to the repository:
-
-```bash
-EُX
-├── pipelines/
-│   ├── netflix-clone-pipeline.yaml    # Main Pipeline definition
-│   └── pipeline-run-example.yaml      # Example of PipelineRun
-├── tasks/
-│   ├── git-clone.yaml                 # Clone repository task
-│   ├── buildah.yaml                   # Build Docker image using Buildah
-│   ├── trivy-scan.yaml                # Security vulnerability scan
-│   └── push-image.yaml                # Push image to registry
-└── triggers/
-    ├── github-push-binding.yaml       # GitHub webhook binding
-    ├── trigger-template.yaml          # PipelineRun template
-    └── event-listener.yaml            # Webhook event listener
