@@ -169,6 +169,8 @@ Pipeline steps:
 * Prometheus → metrics collection
 * Grafana → dashboards & visualization
 * OpenShift Monitoring Stack → cluster insights
+<img width="1920" height="1200" alt="Screenshot 2026-04-30 at 3 06 36 AM" src="https://github.com/user-attachments/assets/e6a0ec66-470a-4abb-97a2-e7e614730e2f" />
+
 
 ---
 
