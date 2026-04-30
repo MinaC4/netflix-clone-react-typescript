@@ -42,7 +42,6 @@ A modern **Netflix Clone application** built with **React + TypeScript + Vite**,
   * LimitRange
   * Security policies
 * ArgoCD Application definition (`argocd/`)
-<img width="1920" height="1200" alt="Screenshot 2026-04-30 at 12 55 19 AM" src="https://github.com/user-attachments/assets/03e19a53-1486-489a-a3f5-75f1bf313fcc" />
 
 
 
