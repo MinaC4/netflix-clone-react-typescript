@@ -248,7 +248,7 @@ This project is simplify cloning and running the full DevOps flow  especially fo
 The following professional Tekton structure is **planned** but not yet added to the repository:
 
 ```bash
-
+EُX
 ├── pipelines/
 │   ├── netflix-clone-pipeline.yaml    # Main Pipeline definition
 │   └── pipeline-run-example.yaml      # Example of PipelineRun
