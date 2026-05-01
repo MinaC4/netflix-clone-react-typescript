@@ -19,7 +19,7 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Architecture Overview](#-architecture-overview)
 - [Project Structure](#-project-structure)
@@ -35,7 +35,7 @@
 
 ---
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 <div align="center">
 
@@ -49,13 +49,13 @@
 
 | Zone | Component | Technology | Purpose |
 |------|-----------|------------|---------|
-| 🖥️ **Developer** | GitHub Repository | Git | Source of Truth |
-| 🔧 **CI** | Tekton Pipelines | OpenShift Pipelines | Build, Scan, Deploy |
-| 📦 **Registry** | OpenShift Internal Registry | Container Storage | Image Storage |
-| 🚀 **CD** | ArgoCD | OpenShift GitOps | GitOps Synchronization |
-| ☸️ **Runtime** | OpenShift Cluster | Kubernetes | Application Runtime |
-| 🌍 **Access** | OpenShift Route | HAProxy | External Access |
-| 📊 **Observability** | Prometheus + Grafana | Monitoring Stack | Metrics & Logs |
+|  **Developer** | GitHub Repository | Git | Source of Truth |
+|  **CI** | Tekton Pipelines | OpenShift Pipelines | Build, Scan, Deploy |
+|  **Registry** | OpenShift Internal Registry | Container Storage | Image Storage |
+|  **CD** | ArgoCD | OpenShift GitOps | GitOps Synchronization |
+|  **Runtime** | OpenShift Cluster | Kubernetes | Application Runtime |
+|  **Access** | OpenShift Route | HAProxy | External Access |
+|  **Observability**  | Metrics & Logs |
 
 ### Data Flow
 
@@ -146,7 +146,7 @@ End-2-End-DevOps-OpenShift-Platform/
 
 ---
 
-## 🎨 Application Layer
+##  Application Layer
 
 ### Technology Stack
 
@@ -191,11 +191,11 @@ USER 101
 ```
 
 **Nginx Configuration Highlights:**
-- ✅ Port 8080 (OpenShift-compatible non-root)
-- ✅ SPA routing: `try_files $uri $uri/ /index.html`
-- ✅ Static assets cached 1 year (js/css/images/fonts)
-- ✅ Gzip compression enabled
-- ✅ Security headers
+-  Port 8080 (OpenShift-compatible non-root)
+-  SPA routing: `try_files $uri $uri/ /index.html`
+-  Static assets cached 1 year (js/css/images/fonts)
+-  Gzip compression enabled
+-  Security headers
 
 ---
 
@@ -246,7 +246,7 @@ Running
 
 ---
 
-## 🚀 GitOps Layer
+## GitOps Layer
 
 ### ArgoCD Application: `netflix-clone`
 
@@ -399,7 +399,7 @@ container:
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -450,7 +450,7 @@ oc get route netflix-clone -n netflix-clone
 
 ---
 
-## 🎯 Key Engineering Concepts
+##  Key Engineering Concepts
 
 | Concept | Implementation |
 |---------|---------------|
@@ -473,19 +473,35 @@ oc get route netflix-clone -n netflix-clone
 <div align="center">
 
 ### Application UI
-![Application Screenshot](docs/images/app-screenshot.png)
+![Application Screenshot] 
+
+<img width="1920" height="1200" alt="Screenshot 2026-04-30 at 1 00 07 AM" src="https://github.com/user-attachments/assets/f0c853a7-8857-4bb0-9660-a2c326c0e08e" />
+
+
 *Netflix Clone UI — Home page with featured content carousel*
 
 ### Tekton Pipeline
-![Tekton Pipeline](docs/images/tekton-pipeline.png)
+![Tekton Pipeline]
+
+<img width="1920" height="1200" alt="Screenshot 2026-04-30 at 12 57 40 AM" src="https://github.com/user-attachments/assets/7e9b4613-6b69-4290-952a-312aa334a3a8" />
+
+
 *Tekton Pipeline — 4 sequential tasks: Build → Push → Scan → Deploy*
 
 ### ArgoCD Sync Status
-![ArgoCD Sync](docs/images/argocd-sync.png)
+![ArgoCD Sync]
+
+<img width="1920" height="1200" alt="Screenshot 2026-04-30 at 12 52 32 AM" src="https://github.com/user-attachments/assets/f080a48c-cc63-4f07-92d2-c6819b8ebaba" />
+
+
 *ArgoCD Application — Synced ✔ | Healthy ✔ | Self-healing enabled*
 
 ### OpenShift Resources
-![OpenShift Resources](docs/images/openshift-resources.png)
+![OpenShift Resources]
+
+<img width="1920" height="1200" alt="Screenshot 2026-04-30 at 12 53 16 AM" src="https://github.com/user-attachments/assets/34dcd8f4-f528-4550-a2e7-2a614eaa439c" />
+
+
 *OpenShift Console — All resources in netflix-clone namespace*
 
 </div>
