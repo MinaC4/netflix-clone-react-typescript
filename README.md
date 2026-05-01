@@ -11,7 +11,7 @@
 [![Nginx](https://img.shields.io/badge/Nginx-1.24-009639?logo=nginx&logoColor=white)](https://nginx.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**A modern Netflix UI clone deployed on OpenShift using enterprise-grade DevOps + GitOps patterns**
+**A modern Netflix UI clone deployed on OpenShift using DevOps + GitOps patterns**
 
 *React + TypeScript + Vite → Tekton (CI) → ArgoCD (CD) → OpenShift (Runtime)*
 
