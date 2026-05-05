@@ -167,12 +167,12 @@ End-2-End-DevOps-OpenShift-Platform/
 
 ### Key Features
 
-- 🏠 **Home Page** — Featured content carousel with trending movies
-- 🎬 **Movie/TV Details** — Comprehensive content information page
-- ▶️ **Watch Page** — Streaming simulation interface
-- 🎭 **Genres Grid** — Browse by category (Action, Comedy, Drama, etc.)
-- 🔍 **Dynamic Content** — Real-time data from TMDB API
-- 📱 **Responsive Design** — Mobile-first Material UI components
+-  **Home Page** — Featured content carousel with trending movies
+-  **Movie/TV Details** — Comprehensive content information page
+-  **Watch Page** — Streaming simulation interface
+-  **Genres Grid** — Browse by category (Action, Comedy, Drama, etc.)
+-  **Dynamic Content** — Real-time data from TMDB API
+-  **Responsive Design** — Mobile-first Material UI components
 
 ### Build Configuration
 
@@ -205,7 +205,7 @@ USER 101
 
 ---
 
-## 🔧 CI/CD Pipeline
+##  CI/CD Pipeline
 
 ### Tekton Pipeline: `netflix-clone-pipeline`
 
@@ -304,10 +304,10 @@ ignoreDifferences:
 
 | Feature | Description |
 |---------|-------------|
-| 📡 **Continuous Sync** | Watches Git repo for changes every 3 minutes |
-| 🛡️ **Self-Healing** | Automatically reverts manual cluster changes |
-| 🔍 **Drift Detection** | Alerts when live state diverges from Git |
-| 📋 **Declarative** | All config in Git = single source of truth |
+|  **Continuous Sync** | Watches Git repo for changes every 3 minutes |
+|  **Self-Healing** | Automatically reverts manual cluster changes |
+|  **Drift Detection** | Alerts when live state diverges from Git |
+|  **Declarative** | All config in Git = single source of truth |
 
 #### ArgoCD UI Indicators
 
@@ -318,7 +318,7 @@ Health Status: Healthy ✔
 
 ---
 
-## ☸️ OpenShift Runtime
+##  OpenShift Runtime
 
 ### Namespace: `netflix-clone`
 
@@ -380,7 +380,7 @@ container:
 
 ---
 
-## 📊 Observability
+##  Observability
 
 ### Cluster-Managed Components (Pre-installed)
 
@@ -474,7 +474,7 @@ oc get route netflix-clone -n netflix-clone
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 <div align="center">
 
